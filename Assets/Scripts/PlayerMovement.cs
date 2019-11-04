@@ -14,15 +14,20 @@ public class PlayerMovement : MonoBehaviour
     public float h;
     public float v;
 
+    public Animator anim;
+
     void Start()
     {
         charController = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
+        anim.SetFloat("Speed", v);
+        anim.SetFloat("Direction", h);
 
         Vector3 direction = new Vector3(h, 0, v);
         Vector3 velocity = direction * moveSpeed;
