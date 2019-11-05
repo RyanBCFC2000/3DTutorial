@@ -30,6 +30,7 @@ public class HealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             if(gameObject.tag != "Player"){
                 UIScript.updateScore(10);
                 Destroy(gameObject);
