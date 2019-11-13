@@ -6,6 +6,7 @@ public class CameraSwitch : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
+    
     void Start()
     {
        camera1.SetActive(true);

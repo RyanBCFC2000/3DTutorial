@@ -16,7 +16,7 @@ public class EnemyAttack : MonoBehaviour
         {
             HealthScript playerHealth = other.GetComponent<HealthScript>();
             playerHealth.Damage(damageDealt);
-            nextTimeAttackIsAllowed = Time.time + attackDelay;
+            nextTimeAttackIsAllowed = Time.time + attackDelay; // This bit of code locates the Player via a tag and does damage to the Players health
         }
     }
 

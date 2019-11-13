@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         healthBar.maxValue = healthScript.getMaxHealth();
         healthBar.value = healthScript.getHealth();
-        healthTxt.text = "Health:  " + healthScript.getHealth();
+        healthTxt.text = "Health:  " + healthScript.getHealth(); //This part of the script is setting up the Health Bar and everything that makes it up
 
     }
 

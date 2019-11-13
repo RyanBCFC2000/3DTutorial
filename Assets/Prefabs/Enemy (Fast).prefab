@@ -170,7 +170,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 0.99999994
-  m_Radius: 0.50000006
+  m_Radius: 0.8
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -253,3 +253,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maximumHealth: 100
+  losePanel: {fileID: 0}
