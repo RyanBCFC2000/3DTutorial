@@ -7,7 +7,7 @@ public class menuScript : MonoBehaviour
 {
     public void returntoMain()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0); // Looks at Scenemanager and loads scene 
     }
     public void loadMain()
     {
@@ -21,9 +21,14 @@ public class menuScript : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void loadWinRoom()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void exitGame()
     {
-        Application.Quit();
+        Application.Quit(); // When Button is clicked quit application
     }
 
     void Start()
