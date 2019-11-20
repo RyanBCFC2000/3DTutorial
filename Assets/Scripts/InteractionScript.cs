@@ -12,7 +12,7 @@ public class InteractionScript : MonoBehaviour
             if (Physics.Raycast(mouseRay, out hitInfo)){
                 DoorOpenScript door = hitInfo.transform.GetComponent<DoorOpenScript>();
                 if (door){
-                    door.enabled = true;
+                    door.enabled = true; //When the F Key is pressed this script checks to see whether the Camera is looking at the door and if it is then the interaction takes place and the door opens
                 }
             }
         }

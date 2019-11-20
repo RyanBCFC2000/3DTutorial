@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour
     public float h;
     public float v;
 
-    public Animator anim;
+    public Animator anim; //Variables that are stating the character controller, jumpSpeed, gravity, yVelocity, moveSpeed, horizontal and vertical
 
     void Start()
     {
         charController = GetComponent<CharacterController>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>(); //Sets up the character controller and the animator
     }
 
     void Update()

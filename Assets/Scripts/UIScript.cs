@@ -18,7 +18,7 @@ public class UIScript : MonoBehaviour
     {
         healthBar.maxValue = healthScript.getMaxHealth();
         healthBar.value = healthScript.getHealth();
-        healthTxt.text = "Health:  " + healthScript.getHealth();
+        healthTxt.text = "Health:  " + healthScript.getHealth(); //This part of the script gets the maximum health and puts it after the text "Health" in the UI
     }
 
     public static void updateScore(int amount){
@@ -31,6 +31,6 @@ public class UIScript : MonoBehaviour
       healthBar.value = healthScript.getHealth();
       healthTxt.text = "Health:  " + healthScript.getHealth();
       timeNum.text = "" + (int)Time.time;
-      scoreNum.text = score + ""; 
+      scoreNum.text = score + ""; //This part of the script updates the Health bar and shows the text. Also does this for the score and the time
     }
 }

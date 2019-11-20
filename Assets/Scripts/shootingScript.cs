@@ -48,8 +48,9 @@ public class shootingScript : MonoBehaviour
                 HealthScript enemyHealth = hitInfo.transform.GetComponent<HealthScript>();
                 if (enemyHealth != null)
                 {
-                    enemyHealth.Damage(damageDealt);
+                    enemyHealth.Damage(damageDealt); //If enemy gets hit it takes damage 
                 }
+                
             }
         }
     }

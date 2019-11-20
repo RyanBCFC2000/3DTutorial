@@ -14,6 +14,6 @@ public class LookX : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity, 0);
+        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivity, 0); //This script gets the axis of the mouse and sets the sensitivity of the rotation so the Player can turn along the x axis without much issue
     }
 }

@@ -6,7 +6,8 @@ public class HealthScript : MonoBehaviour
 {
     [SerializeField] int maximumHealth = 100;
      int currentHealth = 0;
-     public GameObject losePanel;
+     public GameObject losePanel; //Variables that state the currentHealth, maximumHealth and the losePanel
+    
     void Start()
     {
         currentHealth = maximumHealth;
@@ -39,14 +40,13 @@ public class HealthScript : MonoBehaviour
                     Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
               losePanel.SetActive(true);
-              Time.timeScale = 0;
-          }  
+              Time.timeScale = 0; //If the current health is less than 0, health equals 0. If the gameObject is tagged with Player then update the score by 10 and destroy the gameObject
+          }
+        }
+          else if(currentHealth >= 100){
+              currentHealth = 100; //Makes sure that the Players health can't go any higher than 100 even when using a health potion
+          }
         }
     }
 
- 
-    void Update()
-    {
-        
-    }
-}
+
