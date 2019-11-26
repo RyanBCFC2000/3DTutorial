@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 1278406735}
   m_Layer: 0
   m_Name: Enemy (Fast)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,8 +156,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3062195, y: 1, z: 1.2040291}
-  m_Center: {x: 0.013919179, y: 0, z: 0.006511688}
+  m_Size: {x: 1.223787, y: 1, z: 1.2844312}
+  m_Center: {x: 0.021094818, y: 0, z: -0.004448056}
 --- !u!143 &7507201216927936169
 CharacterController:
   m_ObjectHideFlags: 0

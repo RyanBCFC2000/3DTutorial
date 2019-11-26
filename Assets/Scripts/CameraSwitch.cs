@@ -6,10 +6,10 @@ public class CameraSwitch : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
-    
+
     void Start()
     {
-       camera1.SetActive(true);
+       camera1.SetActive(true); 
        camera2.SetActive(false);
     }
 
@@ -22,7 +22,7 @@ public class CameraSwitch : MonoBehaviour
         }
         else {
             camera2.SetActive(false);
-            camera1.SetActive(true);
+            camera1.SetActive(true); //This bit of code shows that when the Raycasts transform position to the right is 10 camera 2 is set active whilst camera 1 isn't, but if it is anything other than 10 camera 1 is set active whilst camera 2 isn't
         }
     }
 }

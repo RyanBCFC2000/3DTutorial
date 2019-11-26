@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Text healthTxt;
       public Text scoreNum;
     public Text timeNum;
+    
     void Start()
     {
         GameManager manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
@@ -26,6 +28,17 @@ public class GameManager : MonoBehaviour
         healthBar.maxValue = healthScript.getMaxHealth();
         healthBar.value = healthScript.getHealth();
         healthTxt.text = "Health:  " + healthScript.getHealth(); //This part of the script is setting up the Health Bar and everything that makes it up
+
+    }
+
+    public void Save()
+    {
+      GameObject player = GameObject.FindGameObjectWithTag("Player");
+      SaveGame saveFile = 
+      new SaveGame(player.transform.position.x,player.transform.position.y,player.transform.position.z);
+      string JSONString = JsonUtility.ToJson(saveData);
+
+      File.WriteAllText(Application.persistentDataPath + "/playerSave.save", JSONString);
 
     }
 
