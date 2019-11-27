@@ -34,17 +34,11 @@ public class GameManager : MonoBehaviour
     public void Save()
     {
       GameObject player = GameObject.FindGameObjectWithTag("Player");
-      SaveGame saveFile = 
+      SaveGame saveData = 
       new SaveGame(player.transform.position.x,player.transform.position.y,player.transform.position.z);
       string JSONString = JsonUtility.ToJson(saveData);
 
       File.WriteAllText(Application.persistentDataPath + "/playerSave.save", JSONString);
 
-    }
-
-   
-    void Update()
-    {
-        
     }
 }

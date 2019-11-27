@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class WinScript : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider collision){
         Debug.Log(collision.gameObject);
         if(collision.gameObject.tag == "Player"){
@@ -18,10 +12,5 @@ public class WinScript : MonoBehaviour
         SceneManager.LoadScene(3); //If Player enters the radius of the trigger then they win the game
         }
        
-    }
-
-    void Update()
-    {
-        
     }
 }

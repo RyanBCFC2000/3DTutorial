@@ -30,15 +30,4 @@ public class menuScript : MonoBehaviour
     {
         Application.Quit(); // When Button is clicked quit application
     }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 }
