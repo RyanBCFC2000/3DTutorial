@@ -7,8 +7,14 @@ public class UIScript : MonoBehaviour
 {
 
     public HealthScript healthScript;
+
+    public ShieldScript shieldScript;
     public Text healthTxt;
     public Slider healthBar;
+
+    public Slider shieldBar;
+
+    public Text shieldTxt;
 
     public Text scoreNum;
     public Text timeNum;
@@ -18,7 +24,11 @@ public class UIScript : MonoBehaviour
     {
         healthBar.maxValue = healthScript.getMaxHealth();
         healthBar.value = healthScript.getHealth();
-        healthTxt.text = "Health:  " + healthScript.getHealth(); //This part of the script gets the maximum health and puts it after the text "Health" in the UI
+        healthTxt.text = "Health:  " + healthScript.getHealth();  //This part of the script gets the maximum health and puts it after the text "Health" in the UI
+
+        shieldBar.maxValue = shieldScript.getMaxShield();
+        shieldBar.value = shieldScript.getShield();
+        shieldTxt.text = "Shield:  " + shieldScript.getShield();
     }
 
     public static void updateScore(int amount){
