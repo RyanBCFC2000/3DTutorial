@@ -9,6 +9,7 @@ public class WinScript : MonoBehaviour
         Debug.Log(collision.gameObject);
         if(collision.gameObject.tag == "Player"){
              Debug.Log("Win");
+             Cursor.lockState=CursorLockMode.None;
         SceneManager.LoadScene(3); //If Player enters the radius of the trigger then they win the game
         }
        
