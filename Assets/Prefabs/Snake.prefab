@@ -76,9 +76,10 @@ GameObject:
   - component: {fileID: 2245985467301506491}
   - component: {fileID: 1782564375635891767}
   - component: {fileID: 2963986910568829651}
+  - component: {fileID: 9049068325816806949}
   - component: {fileID: 2224825925374807996}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Snake
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +242,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2224825925374807996
+--- !u!114 &9049068325816806949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,6 +250,20 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521248185983828762}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a05e5481230404b8d44922d71f8a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: {fileID: 0}
+  destPoint: 0
+--- !u!114 &2224825925374807996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521248185983828762}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b5bdf4d86ec19a488b471ef00a80da0, type: 3}
   m_Name: 
