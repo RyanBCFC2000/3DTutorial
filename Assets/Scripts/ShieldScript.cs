@@ -20,8 +20,17 @@ public class ShieldScript : MonoBehaviour
    public int getMaxShield(){
        return maximumShield;
    }
-    void Update()
+
+   public void Damage(int damageValue)
     {
-        
+        currentShield -= damageValue;
+
+        if (currentShield <= 0)
+        {
+            currentShield = 0;
+        }
+          else if(currentShield >= 10){
+              currentShield = 10; //Makes sure that the Players health can't go any higher than 100 even when using a health potion
+          }
     }
 }
