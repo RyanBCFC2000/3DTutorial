@@ -28,8 +28,13 @@ public class HealthScript : MonoBehaviour
     public void Damage(int damageValue)
     {
         currentHealth -= damageValue;
-
-        if (currentHealth <= 0)
+        DeathCheck();
+        }
+        public void Damage(int damageValue, UnityEngine.AI.NavMeshAgent enemyAI){
+            
+        }
+        void DeathCheck(){
+            if (currentHealth <= 0)
         {
             currentHealth = 0;
             if(gameObject.tag != "Player"){
@@ -45,7 +50,7 @@ public class HealthScript : MonoBehaviour
         }
           else if(currentHealth >= 100){
               currentHealth = 100; //Makes sure that the Players health can't go any higher than 100 even when using a health potion
-          }
+          } 
         }
     }
 
